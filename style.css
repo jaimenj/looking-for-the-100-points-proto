@@ -1,0 +1,17 @@
+/*
+Theme Name: Looking for the 100 points
+Text Domain: looking-for-the-100-points
+Version: 0.1
+Requires at least: 5.5
+Requires PHP: 7.2
+Description: 
+Author: jaimenj
+Author URI: https://jnjsite.com/
+Theme URI: https://jnjsite.com/looking-for-the-100-points-for-wordpress/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+body {
+  background-color: #808080; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlcyI6WyJzdHlsZS5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qXG5UaGVtZSBOYW1lOiBMb29raW5nIGZvciB0aGUgMTAwIHBvaW50c1xuVGV4dCBEb21haW46IGxvb2tpbmctZm9yLXRoZS0xMDAtcG9pbnRzXG5WZXJzaW9uOiAwLjFcblJlcXVpcmVzIGF0IGxlYXN0OiA1LjVcblJlcXVpcmVzIFBIUDogNy4yXG5EZXNjcmlwdGlvbjogXG5BdXRob3I6IGphaW1lbmpcbkF1dGhvciBVUkk6IGh0dHBzOi8vam5qc2l0ZS5jb20vXG5UaGVtZSBVUkk6IGh0dHBzOi8vam5qc2l0ZS5jb20vbG9va2luZy1mb3ItdGhlLTEwMC1wb2ludHMtZm9yLXdvcmRwcmVzcy9cbkxpY2Vuc2U6IEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIHYyIG9yIGxhdGVyXG5MaWNlbnNlIFVSSTogaHR0cDovL3d3dy5nbnUub3JnL2xpY2Vuc2VzL2dwbC0yLjAuaHRtbFxuKi9cblxuYm9keSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzgwODA4MDtcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7OztFQVlFO0FBRUYsQUFBQSxJQUFJLENBQUM7RUFDRCxnQkFBZ0IsRUFBRSxPQUFPLEdBQzVCIn0= */
