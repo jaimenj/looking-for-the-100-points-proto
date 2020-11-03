@@ -21,8 +21,6 @@ function css() {
 }
 
 function js() {
-    fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js', './js/bootstrap.min.js');
-    fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js.map', './js/bootstrap.min.js.map');
     return gulp.src([
             './js/main.js',
         ])
@@ -34,6 +32,12 @@ function js() {
 }
 
 function watchAll() {
+    fs.copy('./node_modules/bootstrap/dist/css/bootstrap.min.css', './css/bootstrap.min.css');
+
+    fs.copy('./node_modules/jquery/dist/jquery.min.js', './js/jquery.min.js');
+    fs.copy('./node_modules/popper.js/dist/umd/popper.min.js', './js/popper.min.js');
+    fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js', './js/bootstrap.min.js');
+    
     gulp.watch(['./scss/*', './js/*'], parallel('css', 'js'));
 }
 
