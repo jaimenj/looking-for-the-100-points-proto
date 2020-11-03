@@ -10,18 +10,18 @@ const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename');
 
 function css() {
-    return gulp.src('./style.scss')
+    return gulp.src('./scss/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         //.pipe(cleanCss())
         .pipe(rename('style.css'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./css'))
 }
 
 function js() {
     return gulp.src([
-            './main.js'
+            './js/main.js'
         ])
         .pipe(sourcemaps.init())
         //.pipe(uglify())
@@ -31,7 +31,7 @@ function js() {
 }
 
 function watchAll() {
-    gulp.watch(['./style.scss', './main.js'], parallel('css', 'js'))
+    gulp.watch(['./scss/*', './js/*'], parallel('css', 'js'))
 }
 
 exports.css = css
