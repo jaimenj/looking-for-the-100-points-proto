@@ -11,8 +11,12 @@ wp_enqueue_script('main', get_template_directory_uri().'/main.min.js', ['jquery'
 
 add_theme_support('title-tag');
 
-add_filter('style_loader_tag', 'filter_preload_css_header', 10, 4);
+/*add_filter('style_loader_tag', 'filter_preload_css_header', 10, 4);
 function filter_preload_css_header($html, $handle)
 {
-    return str_replace("rel='stylesheet'", "rel='preload' as='style'", $html);
-}
+    //if ('my-style-handle' === $handle) {
+        return str_replace("rel='stylesheet'", "rel='preload' as='style'", $html);
+    //}
+
+    return $html;
+}*/
