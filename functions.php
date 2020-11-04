@@ -10,6 +10,13 @@ wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.j
 wp_enqueue_script('main', get_template_directory_uri().'/main.min.js', ['jquery', 'poper', 'bootstrap'], '', true);
 
 add_theme_support('title-tag');
+add_theme_support('custom-logo', [
+    'height' => 100,
+    'width' => 100,
+    'flex-height' => true,
+    'flex-width' => true,
+    'header-text' => ['JnjSite.com', 'Entre bastidores de un apasionado de la informática'],
+]);
 
 /*add_filter('style_loader_tag', 'filter_preload_css_header', 10, 4);
 function filter_preload_css_header($html, $handle)
