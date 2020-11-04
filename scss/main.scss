@@ -21,6 +21,12 @@ nav {
     color: $footer-color;
 }
 
+.footer-pre {
+    >div {
+        padding: 0px;
+    }
+}
+
 .footer-main {
     background-color: #3f4144;
 }
@@ -29,7 +35,6 @@ nav {
     background-color: #343a40;
 
     .sign {
-
         margin-top: 20px;
         margin-bottom: 20px;
     }

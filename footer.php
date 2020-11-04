@@ -1,23 +1,52 @@
 
-
     <div class="row footer footer-pre">
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/diseno-programacion-gestion-proyectos-web/">
+                <img src="/wp-content/uploads/2020/01/program.jpg" 
+                alt="Diseño, programación y gestión de proyectos web" 
+                title="Diseño, programación y gestión de proyectos web"
+                class="img-fluid">
+            </a>
         </div>
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/administracion-de-servidores/">
+                <img src="/wp-content/uploads/2020/01/servers.jpg" 
+                alt="Servidores, microservicios o arquitecturas server-less" 
+                title="Servidores, microservicios o arquitecturas server-less"
+                class="img-fluid">
+            </a>
         </div>
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/administracion-de-estaciones-de-trabajo-y-ordenadores-personales/">
+                <img src="/wp-content/uploads/2020/01/workstations.jpg" 
+                alt="Administración de estaciones de trabajo y ordenadores personales" 
+                title="Administración de estaciones de trabajo y ordenadores personales"
+                class="img-fluid">
+            </a>
         </div>
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/sistemas-embebidos/">
+                <img src="/wp-content/uploads/2020/01/embeddedsystems.jpg" 
+                alt="Sistemas embebidos" 
+                title="Sistemas embebidos"
+                class="img-fluid">
+            </a>
         </div>
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/seo-sem-y-marketing-para-webs/">
+                <img src="/wp-content/uploads/2020/01/seo-sem-marketing.jpg" 
+                alt="SEO, SEM y marketing para webs" 
+                title="SEO, SEM y marketing para webs"
+                class="img-fluid">
+            </a>
         </div>
-        <div class="col-md-2">
-        Lorem ipsum
+        <div class="col-xl-2 col-lg-4 col-6">
+            <a href="/consultoria-asesoramiento-informatico/">
+                <img src="/wp-content/uploads/2020/01/contact.jpg" 
+                alt="Consultoría y asesoramiento informático" 
+                title="Consultoría y asesoramiento informático"
+                class="img-fluid">
+            </a>
         </div>
     </div>
     <div class="row footer footer-main">
