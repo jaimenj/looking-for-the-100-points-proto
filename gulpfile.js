@@ -11,11 +11,11 @@ const rename = require('gulp-rename');
 const fs = require('fs-extra');
 
 function css() {
-    return gulp.src('./scss/style.scss')
+    return gulp.src('./scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         //.pipe(cleanCss())
-        .pipe(rename('style.css'))
+        .pipe(rename('main.min.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./css'));
 }
@@ -33,10 +33,13 @@ function js() {
 
 function watchAll() {
     fs.copy('./node_modules/bootstrap/dist/css/bootstrap.min.css', './css/bootstrap.min.css');
+    fs.copy('./node_modules/bootstrap/dist/css/bootstrap.min.css.map', './css/bootstrap.min.css.map');
 
     fs.copy('./node_modules/jquery/dist/jquery.min.js', './js/jquery.min.js');
     fs.copy('./node_modules/popper.js/dist/umd/popper.min.js', './js/popper.min.js');
+    fs.copy('./node_modules/popper.js/dist/umd/popper.min.js.map', './js/popper.min.js.map');
     fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js', './js/bootstrap.min.js');
+    fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js.map', './js/bootstrap.min.js.map');
     
     gulp.watch(['./scss/*', './js/*'], parallel('css', 'js'));
 }
