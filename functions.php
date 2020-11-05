@@ -28,6 +28,16 @@ function filter_preload_css_header($html, $handle)
     return $html;
 }*/
 
+
+register_sidebar([
+    'name' => 'Main sidebar',
+    'id' => 'sidebar-main',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+]);
+
 register_sidebar([
     'name' => 'Footer left',
     'id' => 'sidebar-footer-left',

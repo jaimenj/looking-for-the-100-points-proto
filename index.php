@@ -4,7 +4,7 @@ get_header();
 
 <div class="container">
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-9">
 
             <?php
             if ( have_posts() ) : 
@@ -17,13 +17,12 @@ get_header();
             ?>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
 
             <?php get_sidebar(); ?>
 
         </div>
     </div>
-
 </div>
 
 <?php
