@@ -50,8 +50,14 @@
         </div>
     </div>
     <div class="row footer footer-main">
-        <div class="col-md-12">
-        Lorem ipsum
+        <div class="col-md-4 sidebar">
+            <?php dynamic_sidebar('sidebar-footer-left'); ?>
+        </div>
+        <div class="col-md-4 sidebar">
+            <?php dynamic_sidebar('sidebar-footer-center'); ?>
+        </div>
+        <div class="col-md-4 sidebar">
+            <?php dynamic_sidebar('sidebar-footer-right'); ?>
         </div>
     </div>
     <div class="row footer footer-post">
