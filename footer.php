@@ -57,52 +57,66 @@
     <div class="row footer footer-post">
         <div class="col-md-6 sign">
             <p>© <?= date('Y'); ?> JnjSite.com - MIT license</p>
-            <p>Funciona con WordPress - Diseño y programación a medida por Jnj con jQuery, Bootstrap, Popper, Fontawesome..</p>
+            <p>Diseño y programación a medida del 
+            <a href="https://github.com/jaimenj/looking-for-the-100-points"
+            target="_blank">tema</a> por Jnj.</p>
         </div>
         <div class="col-md-6">
             <div class="socials">
                 <a rel="nofollow noopener noreferrer" 
-                class="social-icon icon-mail" 
+                class="social-icon" 
                 title="E-mail" 
                 aria-label="E-mail" 
                 href="mailto:info@jnjsite.com" 
                 target="_blank" 
-                data-wpel-link="external"><i class="fas fa-envelope"></i></a>
+                data-wpel-link="external">
+                    <span class="icon-mail4"></span>    
+                </a>
                 <a rel="noopener noreferrer nofollow external" 
-                class="social-icon icon-linkedin" 
+                class="social-icon" 
                 title="Linkedin"
                 aria-label="Contáctame en LinkedIn" 
                 href="https://es.linkedin.com/in/jaimeninoles" 
                 target="_blank" 
-                data-wpel-link="external"><i class="fab fa-linkedin"></i></a>
+                data-wpel-link="external">
+                    <span class="icon-linkedin"></span>
+                </a>
                 <a rel="noopener noreferrer nofollow external" 
-                class="social-icon icon-facebook" 
+                class="social-icon" 
                 title="Facebook" 
                 aria-label="Sígueme en Facebook" 
                 href="https://www.facebook.com/jaimeninolesinformatico/" 
                 target="_blank" 
-                data-wpel-link="external"><i class="fab fa-facebook"></i></a>
+                data-wpel-link="external">
+                    <span class="icon-facebook2"></span>
+                </a>
                 <a rel="noopener noreferrer nofollow external" 
-                class="social-icon icon-twitter" 
+                class="social-icon" 
                 title="Twitter" 
                 aria-label="Sígueme en Twitter" 
                 href="https://twitter.com/jaimeninoles" 
                 target="_blank" 
-                data-wpel-link="external"><i class="fab fa-twitter"></i></a>
+                data-wpel-link="external">
+                    <span class="icon-twitter"></span>
+                </a>
                 <a rel="noopener noreferrer nofollow external" 
-                class="social-icon icon-github" 
+                class="social-icon" 
                 title="Github" 
                 aria-label="Sígueme en Github" 
                 href="https://github.com/jaimenj" 
                 target="_blank" 
-                data-wpel-link="external"><i class="fab fa-github"></i></a>
+                data-wpel-link="external">
+                    <span class="icon-github"></span>
+                </a>
                 <a rel="nofollow noopener noreferrer" 
-                class="social-icon icon-feed" 
+                class="social-icon" 
                 title="Suscríbete a mi feed RSS"
                 aria-label="Suscríbete a mi feed RSS" 
                 href="https://jnjsite.com/feed/rss/" 
                 target="_blank" 
-                data-wpel-link="internal"><i class="fas fa-rss"></i></a>
+                data-wpel-link="internal">
+                    <span class="icon-rss"></span>
+                </a>
             </div>
         </div>
     </div>

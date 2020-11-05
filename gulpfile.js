@@ -40,8 +40,6 @@ function watchAll() {
     fs.copy('./node_modules/popper.js/dist/umd/popper.min.js.map', './js/popper.min.js.map');
     fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js', './js/bootstrap.min.js');
     fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js.map', './js/bootstrap.min.js.map');
-    fs.copy('./node_modules/@fortawesome/fontawesome-free/js/all.min.js', './js/fontawesome.all.min.js');
-
 
     gulp.watch(['./scss/*', './js/*'], parallel('css', 'js'));
 }

@@ -1,7 +1,8 @@
-'use strict'
+'use strict';
 
-window.addEventListener('load', function () {
-    console.log('Loading main.js from theme..')
+// DOM ready..
+$(function () {
+    console.log('Loading main.js..')
 
     // TODO
-})
+});
