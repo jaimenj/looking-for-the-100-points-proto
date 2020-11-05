@@ -30,11 +30,23 @@ nav {
 // FOOTER ///////////////////////////////////////////////////////////////////
 
 .tag-cloud-link {
-    
+    font-size: 20px !important;
+    border: 1px solid;
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .footer {
     color: $footer-color;
+
+    a:hover {
+        color: white;
+    }
 }
 
 .footer-pre {
