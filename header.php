@@ -23,7 +23,7 @@ wp_body_open();
 ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <?php
             $custom_logo_id = get_theme_mod('custom_logo');
             $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -33,37 +33,47 @@ wp_body_open();
                 echo get_bloginfo('name');
             }
             ?>
+            JnjSite.com
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-menu-id" aria-controls="header-menu-id" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <?php
+            wp_nav_menu([
+                // DEFAULT -->
+                //'menu' => '',
+                //'container' => 'ul',
+                //'container_class' => '',
+                //'container_id' => '',
+                //'container_aria_label' => '',
+                //'menu_class' => 'navbar-nav mr-auto',
+                //'menu_id' => '',
+                //'echo' => true,
+                //'fallback_cb' => 'wp_page_menu',
+                //'before' => '',
+                //'after' => '',
+                //'link_before' => '',
+                //'link_after' => '',
+                //'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                //'item_spacing' => 'preserve',
+                //'depth' => 0,
+                //'walker' => '',
+                //<-- END DEFAULT
+                'theme_location' => 'header-menu',
+                'depth' => 7,
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'header-menu-id',
+                'menu_class' => 'navbar-nav mr-auto',
+                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                'walker' => new WP_Bootstrap_Navwalker(),
+            ]);
+            ?>
+            <form class="form-inline form-navbar-search" action="/" method="get">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="s" value="<?= $_GET['s']; ?>">
+            <button class="btn btn-outline-success btn-navbar-search" type="submit">Buscar</button>
             </form>
-        </div>
+        <!-- </div> -->
     </nav>

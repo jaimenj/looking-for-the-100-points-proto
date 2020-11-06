@@ -69,7 +69,7 @@
     <div class="row footer footer-post">
         <div class="col-md-6 sign">
             <p>© <?= date('Y'); ?> JnjSite.com - MIT license</p>
-            <p>Diseño y programación a medida del 
+            <p>Sitio hecho sobre <span class="icon-wordpress"></span> WordPress, diseño y programación del 
             <a href="https://github.com/jaimenj/looking-for-the-100-points"
             target="_blank">tema</a> por Jnj.</p>
         </div>
