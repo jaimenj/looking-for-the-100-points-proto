@@ -1,11 +1,74 @@
 @import "icomoon";
 
-$footer-color: #c0c0c0;
+$background-color:#c0c0c0;
+$background-color-footer-main: #3f4144;
+$background-color-footer-post: #343a40;
+$footer-color: $background-color;
 
 // GENERAL ///////////////////////////////////////////////////////////////////
 
 body {
-    background-color: #c0c0c0;
+    background-color: $footer-color;
+}
+
+.carousel-home {
+    margin-top: -3rem;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 3px black;
+
+    img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .carousel-caption h5 {
+        font-size: 50px;
+        text-shadow: 0 4px 5px black;
+        font-weight: bold;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1 !important;
+    transition: background-color 1s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: background-color 1s;
+    }
+}
+
+.carousel-indicators {
+    margin-bottom: 0px;
+
+    li {
+        height: 20px;
+        width: 60px;
+        border-bottom: 0px;
+        margin-bottom: 10px;
+        border-top: 0px;
+        margin-top: 10px;
+        box-shadow: 0 2px 3px black;
+
+        &.active {
+            box-shadow: 0 4px 5px black;
+        }
+    }
+}
+
+@media only screen and (max-width: 990px) and (min-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 30px !important;
+    }
 }
 
 // TOP NAVBAR ///////////////////////////////////////////////////////////////////
@@ -76,6 +139,8 @@ nav {
 // MAIN SIDEBAR ///////////////////////////////////////////////////////////////////
 
 .sidebar {
+    text-align: right;
+    
     li {
         list-style: none;
     }
@@ -406,7 +471,7 @@ nav {
 
 // FOOTER ///////////////////////////////////////////////////////////////////
 
-.tag-cloud-link {
+/*.tag-cloud-link {
     font-size: 20px !important;
     border: 1px solid;
     display: inline-block;
@@ -416,7 +481,7 @@ nav {
     &:hover {
         text-decoration: none;
     }
-}
+}*/
 
 .footer {
     color: $footer-color;
@@ -427,13 +492,14 @@ nav {
 }
 
 .footer-pre {
+
     >div {
         padding: 0px;
     }
 }
 
 .footer-main {
-    background-color: #3f4144;
+    background-color: $background-color-footer-main;
 
     .sidebar {
         padding: 20px;
@@ -445,7 +511,7 @@ nav {
 }
 
 .footer-post {
-    background-color: #343a40;
+    background-color: $background-color-footer-post;
 
     .sign {
         margin-top: 20px;

@@ -55,4 +55,8 @@
         e.preventDefault();
     });
 
+    $('body').on('click', '.carousel-item-home', function () {
+        window.location.href = $(this).data('url');
+    });
+
 })(jQuery);

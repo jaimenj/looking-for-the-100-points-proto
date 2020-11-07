@@ -1,5 +1,5 @@
 
-    <div class="row footer footer-pre">
+    <div class="row footer footer-pre mt-5">
         <div class="col-xl-2 col-lg-4 col-6">
             <a href="/diseno-programacion-gestion-proyectos-web/">
                 <img src="/wp-content/uploads/2020/01/program.jpg" 

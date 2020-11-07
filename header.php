@@ -39,41 +39,39 @@ wp_body_open();
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-            <?php
-            wp_nav_menu([
-                // DEFAULT -->
-                //'menu' => '',
-                //'container' => 'ul',
-                //'container_class' => '',
-                //'container_id' => '',
-                //'container_aria_label' => '',
-                //'menu_class' => 'navbar-nav mr-auto',
-                //'menu_id' => '',
-                //'echo' => true,
-                //'fallback_cb' => 'wp_page_menu',
-                //'before' => '',
-                //'after' => '',
-                //'link_before' => '',
-                //'link_after' => '',
-                //'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                //'item_spacing' => 'preserve',
-                //'depth' => 0,
-                //'walker' => '',
-                //<-- END DEFAULT
-                'theme_location' => 'header-menu',
-                'depth' => 7,
-                'container' => 'div',
-                'container_class' => 'collapse navbar-collapse',
-                'container_id' => 'header-menu-id',
-                'menu_class' => 'navbar-nav mr-auto',
-                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                'walker' => new WP_Bootstrap_Navwalker(),
-            ]);
-            ?>
-            <form class="form-inline form-navbar-search" action="/" method="get">
+        <?php
+        wp_nav_menu([
+            // DEFAULT -->
+            //'menu' => '',
+            //'container' => 'ul',
+            //'container_class' => '',
+            //'container_id' => '',
+            //'container_aria_label' => '',
+            //'menu_class' => 'navbar-nav mr-auto',
+            //'menu_id' => '',
+            //'echo' => true,
+            //'fallback_cb' => 'wp_page_menu',
+            //'before' => '',
+            //'after' => '',
+            //'link_before' => '',
+            //'link_after' => '',
+            //'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            //'item_spacing' => 'preserve',
+            //'depth' => 0,
+            //'walker' => '',
+            //<-- END DEFAULT
+            'theme_location' => 'header-menu',
+            'depth' => 7,
+            'container' => 'div',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id' => 'header-menu-id',
+            'menu_class' => 'navbar-nav mr-auto',
+            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+            'walker' => new WP_Bootstrap_Navwalker(),
+        ]);
+        ?>
+        <form class="form-inline form-navbar-search" action="/" method="get">
             <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="s" value="<?= $_GET['s']; ?>">
             <button class="btn btn-outline-success btn-navbar-search" type="submit">Buscar</button>
-            </form>
-        <!-- </div> -->
+        </form>
     </nav>
