@@ -6,11 +6,18 @@
         console.log('Loading main.js..')
 
         // Multilevel dropdown menu..
-        $('body').on('mouseover', '.dropdown-item', function () {
+        $('body').on('mouseover', '.dropdown-item', function (e) {
+            e.preventDefault();
             if ($(this).closest('.dropdown').hasClass('menu-item-has-children')) {
-                $(this).parent().find('.dropdown-menu').removeClass("show");
+                $(this).siblings().find('.dropdown-menu').removeClass("show");
+                //$(this).closest('.dropdown').find('.dropdown-menu').removeClass("show");
                 $(this).next('.dropdown-menu').addClass("show");
             }
+        });
+        $('body').on('dblclick', '.dropdown-item', function (e) {
+            e.preventDefault();
+            if ($(this).prop('href') != '#')
+                window.location.href = $(this).prop('href');
         });
     });
 

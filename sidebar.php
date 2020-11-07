@@ -35,7 +35,6 @@
     </div>
 
     <script type='text/javascript' src='/js/mc-validate.min.js'></script>
-    <script src="/js/js.cookie.min.js"></script>
     <script type='text/javascript'>
         (function($) {
             window.fnames = new Array();
