@@ -5,20 +5,44 @@
     $(function () {
         console.log('Loading main.js..')
 
-        // Multilevel dropdown menu..
-        $('body').on('mouseover', '.dropdown-item', function (e) {
-            e.preventDefault();
-            if ($(this).closest('.dropdown').hasClass('menu-item-has-children')) {
-                $(this).siblings().find('.dropdown-menu').removeClass("show");
-                //$(this).closest('.dropdown').find('.dropdown-menu').removeClass("show");
-                $(this).next('.dropdown-menu').addClass("show");
-            }
-        });
-        $('body').on('dblclick', '.dropdown-item', function (e) {
-            e.preventDefault();
-            if ($(this).prop('href') != '#')
-                window.location.href = $(this).prop('href');
-        });
+        // Multilevel dropdown menu normal..
+        if (screen.availWidth >= 990) {
+            $('body').on('mouseover', '.dropdown-item', function (e) {
+                //e.preventDefault();
+                if ($(this).closest('.menu-item').hasClass('menu-item-has-children')) {
+                    $(this).siblings().find('.dropdown-menu').removeClass("show");
+                    $(this).next('.dropdown-menu').addClass("show");
+                } else {
+                    $(this).parent().siblings().find('.dropdown-menu').removeClass("show");
+                }
+            });
+        } else {
+            // Menu collapsed and expanding..
+            $('body').on('click', '.dropdown-item', function (e) {
+                var currentMenuItem = this;
+                e.preventDefault();
+                setTimeout(function() {
+                    $(currentMenuItem).parents('.menu-item').addClass('show');
+                    $(currentMenuItem).parents('.dropdown-menu').addClass('show');
+                }, 10, currentMenuItem);
+                if ($(this).closest('.menu-item').hasClass('menu-item-has-children')) {
+                    if($(this).next('.dropdown-menu').hasClass('show')) {
+                        $(this).next('.dropdown-menu').removeClass("show");
+                    } else{
+                        $(this).siblings().find('.dropdown-menu').removeClass("show");
+                        $(this).next('.dropdown-menu').addClass("show");
+                    }
+                } else {
+                    $(this).parent().siblings().find('.dropdown-menu').removeClass("show");
+                }
+            });
+            // Do dlbclick to go to the page if it isn't a #..
+            $('body').on('dblclick', '.dropdown-item', function (e) {
+                if ($(this).prop('href') != '#') {
+                    window.location.href = $(this).prop('href');
+                }
+            });
+        }
     });
 
     $('body').on('click', 'a[href="#"]', function (e) {
