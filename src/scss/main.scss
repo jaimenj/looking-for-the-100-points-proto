@@ -22,6 +22,7 @@ body {
     box-shadow: 0 1px 2px black;
 
     img {
+        cursor: pointer;
         height: 500px;
         object-fit: cover;
     }
@@ -30,6 +31,11 @@ body {
         font-size: 50px;
         text-shadow: 0 4px 5px black;
         font-weight: bold;
+    }
+
+    a:hover {
+        color: white;
+        text-decoration: none;
     }
 }
 
@@ -54,10 +60,12 @@ body {
         margin-bottom: 10px;
         border-top: 0px;
         margin-top: 10px;
-        box-shadow: 0 2px 3px black;
+        box-shadow: 0 1px 2px black;
+        transition: box-shadow 1s;
 
         &.active {
             box-shadow: 0 4px 5px black;
+            transition: box-shadow .5s;
         }
     }
 }
@@ -160,6 +168,7 @@ pre,
     position: relative;
     overflow: hidden;
     margin-top: -3rem;
+    margin-bottom: 3rem;
     margin-left: -15px;
     margin-right: -15px;
     box-shadow: 0 1px 2px black;
@@ -192,6 +201,58 @@ pre,
             text-decoration: none;
         }
     }
+}
+
+.comments-wrapper {
+    padding: 10px;
+    background-color: white;
+
+    ol {
+        padding-left: 0px;
+    }
+
+    li {
+        padding-left: 10px;
+        list-style: none;
+    }
+
+    .reply {
+        padding: 10px;
+    }
+
+    .comment-body {
+        border-left: 1px dashed #808080;
+        padding-left: 10px;
+        border-bottom: 1px dashed #808080;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .comment-reply-link {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .form-submit {
+        margin-bottom: 0px;
+    }
+
+    .submit {
+        background-color: lightgreen;
+        border: 1px solid;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+
+}
+
+.post-edit-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px dashed;
 }
 
 // MAIN SIDEBAR ///////////////////////////////////////////////////////////////////

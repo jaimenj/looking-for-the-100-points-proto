@@ -7,8 +7,11 @@ var debug = true;
     $(function () {
         console.log('Loading main.js..');
 
+        // Service Worker..
         registerServiceWorker();
         updateCacheWithCurrentUrl();
+
+        // MailChimp popup..
         doTasksForMailchimpPopupFrom();
 
         // Multilevel dropdown menu normal..
@@ -80,7 +83,7 @@ function registerServiceWorker() {
             });
 
         //navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        //    for (let registration of registrations) {
+        //    for (var registration of registrations) {
         //        registration.unregister();
         //    }
         //    console.log('Service workers unregistered.');
