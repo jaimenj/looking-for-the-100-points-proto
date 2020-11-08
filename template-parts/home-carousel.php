@@ -25,7 +25,7 @@ $recent_posts = wp_get_recent_posts();
 
             <div 
             class="carousel-item carousel-item-home<?= $first ? ' active' : '' ?>" 
-            data-url="<?= get_permalink($recent_post['ID']) ?>">
+            data-url="<?= home_url($recent_post['post_name']).'/' ?>">
                 <img src="<?= get_the_post_thumbnail_url($recent_post['ID']) ?>" 
                 class="d-block w-100"
                 alt="<?= $recent_post['post_title'] ?>">
