@@ -4,6 +4,12 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php // START PWA THINGS ?>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="<?= get_template_directory_uri() ?>/pwa/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#639">
+    <meta name="theme-color" content="#639">
+    <?php // END PWA THINGS ?>
     <?php
     if (is_user_logged_in()) {
         ?>

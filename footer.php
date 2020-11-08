@@ -69,7 +69,7 @@
     <div class="row footer footer-post">
         <div class="col-md-6 sign">
             <p>© <?= date('Y'); ?> JnjSite.com - MIT license</p>
-            <p>Sitio hecho sobre <span class="icon-wordpress"></span> WordPress, diseño y programación del 
+            <p>Sitio hecho con <span class="icon-wordpress"></span> WordPress, diseño y programación del 
             <a href="https://github.com/jaimenj/looking-for-the-100-points"
             target="_blank">tema</a> por Jnj.</p>
         </div>
@@ -136,6 +136,10 @@
     <?php
     wp_footer();
     ?>
+
+    <!-- START MAILCHIMP -->
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0761a0946723d5a52564de709/9e91cd3d456284e86f71371b9.js");</script>
+    <!-- END MAILCHIMP -->
 
 </body>
 </html>
