@@ -1,6 +1,8 @@
 'use strict';
 
 var debug = true;
+var newSWRegistration = null;
+
 (function ($) {
 
     // DOM ready..

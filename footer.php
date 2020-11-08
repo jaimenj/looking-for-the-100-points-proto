@@ -137,9 +137,9 @@
     wp_footer();
     ?>
 
-    <!-- START MAILCHIMP -->
+    <?php // MAILCHIMP START SCRIPT ?>
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0761a0946723d5a52564de709/9e91cd3d456284e86f71371b9.js");</script>
-    <!-- END MAILCHIMP -->
+    <?php // MAILCHIMP END SCRIPT ?>
 
 </body>
 </html>

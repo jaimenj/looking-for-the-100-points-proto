@@ -70,6 +70,14 @@ body {
     }
 }
 
+.ads-wrapper-entry-posts-before {
+    margin-bottom: 3rem;
+}
+
+.ads-wrapper-entry-posts-after {
+    margin-top: 3rem;
+}
+
 .ads-wrapper>div {
     box-shadow: 0 0 3px 2px #639;
 }
@@ -184,6 +192,11 @@ pre,
 }
 
 .entry-content {
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     img {
         max-width: 100%;
         height: auto;

@@ -1,7 +1,7 @@
 
 <?php
 
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+require_once get_template_directory().'/class-wp-bootstrap-navwalker.php';
 
 wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', [], null);
 wp_enqueue_style('main', get_template_directory_uri().'/css/main.min.css', ['bootstrap'], null);
@@ -18,6 +18,19 @@ add_theme_support('custom-logo', [
     'flex-width' => true,
     'header-text' => ['JnjSite.com', 'Entre bastidores de un apasionado de la informática'],
 ]);
+add_theme_support('post-thumbnails');
+add_theme_support('post-formats');
+add_theme_support('post-html5');
+add_theme_support('responsive-embeds');
+add_theme_support('wp-block-styles');
+/*
+ * More theme support available:
+ * 'post-formats', 'post-thumbnails', 'custom-header', 'custom-background', 'custom-logo',
+ * 'menus', 'automatic-feed-links', 'html5', 'title-tag', 'customize-selective-refresh-widgets',
+ * 'starter-content', 'responsive-embeds', 'align-wide', 'dark-editor-style', 'disable-custom-colors',
+ * 'disable-custom-font-sizes', 'editor-color-palette', 'editor-font-sizes', 'editor-styles',
+ * 'wp-block-styles', and 'core-block-patterns'.
+ *  */
 
 register_nav_menus([
     'header-menu' => 'Menú principal',

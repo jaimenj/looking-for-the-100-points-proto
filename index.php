@@ -4,9 +4,16 @@ get_header();
 if (is_front_page()) {
     get_template_part('template-parts/home-carousel');
 }
-?>
 
-<?php // START ADDS -->
+// Featured image..
+if (have_posts()
+and is_singular()
+and !is_search()
+and !is_front_page()) {
+    get_template_part('template-parts/block-featured-image');
+}
+
+// START ADDS -->
 if ('/' != $_SERVER['REQUEST_URI']
 and false === strpos($_SERVER['REQUEST_URI'], 'consultoria-asesoramiento-informatico')
 and false === strpos($_SERVER['REQUEST_URI'], 'diseno-programacion-gestion-proyectos-web')
@@ -18,22 +25,12 @@ and false === strpos($_SERVER['REQUEST_URI'], 'portfolio')
 and false === strpos($_SERVER['REQUEST_URI'], 'contacto')
 and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 ) { ?>
-	<div class="ads-wrapper" id="21295-1" style="min-height: 100px; text-align: center;"><script src="//ads.themoneytizer.com/s/gen.js?type=1"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=1" ></script></div>
+	<div class="ads-wrapper ads-wrapper-entry-posts-before" id="21295-1" style="min-height: 100px; text-align: center;"><script src="//ads.themoneytizer.com/s/gen.js?type=1"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=1" ></script></div>
 <?php }
-//<-- END ADDS
-
-// Featured image..
-if (have_posts()
-and is_singular()
-and !is_search()
-and !is_front_page()) {
-    get_template_part('template-parts/block-featured-image');
-}
-
-?>
+//<-- END ADDS ?>
 
 <div class="container">
-    <div class="row">
+    <div class="row row-container-posts">
         <div class="col-md-9">
 
             <?php
@@ -75,7 +72,7 @@ and false === strpos($_SERVER['REQUEST_URI'], 'contacto')
 and false === strpos($_SERVER['REQUEST_URI'], 'miscellanous-scripts-for-wordpress')
 and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 ) { ?>
-	<div class="ads-wrapper" id="21295-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=28"></script></div>
+	<div class="ads-wrapper ads-wrapper-entry-posts-after" id="21295-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=28"></script></div>
 <?php }
 //<-- END ADDS?>
 

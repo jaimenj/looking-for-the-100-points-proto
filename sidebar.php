@@ -138,7 +138,6 @@ and strpos($_SERVER['REQUEST_URI'], 'portfolio') === false
 and strpos($_SERVER['REQUEST_URI'], 'contacto') === false
 and strpos($_SERVER['REQUEST_URI'], 'miscellanous-scripts-for-wordpress') === false
 and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
-and false
 ) { ?>
 	<div class="ads-wrapper" id="21295-2"><script src="//ads.themoneytizer.com/s/gen.js?type=2"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=2" ></script></div>
 <?php } 
