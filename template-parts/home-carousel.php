@@ -30,7 +30,7 @@ $recent_posts = wp_get_recent_posts();
                 class="d-block w-100"
                 alt="<?= $recent_post['post_title'] ?>">
                 <div class="carousel-caption">
-                    <h5><?= $recent_post['post_title'] ?></h5>
+                    <h5><a href="<?= home_url($recent_post['post_name']).'/' ?>"><?= $recent_post['post_title'] ?></a></h5>
                 </div>
             </div>
 

@@ -12,7 +12,7 @@
             if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
                 the_excerpt();
             } else {
-                the_content('Continuar leyendo');
+                the_content('Continuar leyendo..');
             }
             ?>
 
@@ -23,7 +23,7 @@
         <?php
         wp_link_pages(
             [
-                'before' => '<nav class="post-nav-links bg-light-background" aria-label="'.esc_attr__('Page', 'twentytwenty').'"><span class="label">'.__('Pages:', 'twentytwenty').'</span>',
+                'before' => '<nav class="post-nav-links bg-light-background" aria-label="Página"><span class="label">Páginas</span>',
                 'after' => '</nav>',
                 'link_before' => '<span class="page-number">',
                 'link_after' => '</span>',
