@@ -8,7 +8,7 @@ wp_enqueue_style('main', get_template_directory_uri().'/css/main.min.css', ['boo
 
 wp_enqueue_script('popper', get_template_directory_uri().'/js/popper.min.js', [], '', true);
 wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', [], '', true);
-wp_enqueue_script('main', get_template_directory_uri().'/main.min.js', [], '', true);
+wp_enqueue_script('main', get_template_directory_uri().'/js/main.min.js', [], '', true);
 
 add_theme_support('title-tag');
 add_theme_support('custom-logo', [

@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <script type='text/javascript' src='/js/mc-validate.min.js'></script>
+    <script type='text/javascript' src='<?= get_template_directory_uri() ?>/js/mc-validate.min.js'></script>
     <script type='text/javascript'>
         (function($) {
             window.fnames = new Array();

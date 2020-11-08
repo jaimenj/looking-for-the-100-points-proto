@@ -11,7 +11,7 @@ const rename = require('gulp-rename');
 const fs = require('fs-extra');
 
 function css() {
-    return gulp.src('./scss/main.scss')
+    return gulp.src('./src/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         //.pipe(cleanCss())
@@ -22,13 +22,13 @@ function css() {
 
 function js() {
     return gulp.src([
-            './js/main.js',
+            './src/js/main.js'
         ])
         .pipe(sourcemaps.init())
         //.pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./js/'));
 }
 
 function watchAll() {
@@ -41,7 +41,10 @@ function watchAll() {
     fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js', './js/bootstrap.min.js');
     fs.copy('./node_modules/bootstrap/dist/js/bootstrap.min.js.map', './js/bootstrap.min.js.map');
 
-    gulp.watch(['./scss/*', './js/*'], parallel('css', 'js'));
+    gulp.watch([
+        './src/scss/*',
+        './src/js/*'
+    ], parallel('css', 'js'));
 }
 
 exports.css = css;

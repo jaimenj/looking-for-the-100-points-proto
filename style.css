@@ -11,5 +11,5 @@ Theme URI: https://jnjsite.com/looking-for-the-100-points-for-wordpress/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-DO NOT USE THIS FOR STYLING, USE scss/*.css INSTEAD..
+DO NOT USE THIS FOR STYLING, USE ./src/scss/*.css INSTEAD..
 */

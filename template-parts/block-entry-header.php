@@ -1,11 +1,4 @@
-<?php
-$entry_header_classes = '';
-if (is_singular()) {
-    $entry_header_classes .= ' header-footer-group';
-}
-?>
-
-<header class="entry-header has-text-align-center<?php echo esc_attr($entry_header_classes); ?>">
+<header class="entry-header">
     <div class="entry-header-inner section-inner medium">
         <?php
 
