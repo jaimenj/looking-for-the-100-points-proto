@@ -22,6 +22,7 @@ and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 <?php }
 //<-- END ADDS
 
+// Featured image..
 if (have_posts()
 and is_singular()
 and !is_search()
@@ -75,5 +76,11 @@ and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 </div>
 
 <?php
+
+// Navigation..
+if (!is_front_page()
+and is_singular()) {
+    get_template_part('template-parts/block-navigation');
+}
 
 get_footer();

@@ -170,9 +170,29 @@ pre,
     }
 }
 
+.pagination-single {
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+    padding: 20px;
+
+    a {
+        font-size: 20px;
+
+        .icon {
+            font-size: 30px;
+            position: relative;
+            top: 6px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
 // MAIN SIDEBAR ///////////////////////////////////////////////////////////////////
 
-.sidebar {
+.sidebar-main-container {
     text-align: right;
 
     li {
