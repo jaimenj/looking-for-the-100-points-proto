@@ -183,6 +183,13 @@ pre,
     }
 }
 
+.entry-content {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .pagination-single {
     margin-top: 3rem;
     margin-bottom: -3rem;
@@ -203,9 +210,31 @@ pre,
     }
 }
 
+.pagination {
+    padding: 20px;
+
+    .screen-reader-text {
+        margin-bottom: 0px;
+        margin-right: 20px;
+    }
+
+    h2,
+    .nav-links {
+        font-size: 20px !important;
+        line-height: initial;
+    }
+}
+
 .comments-wrapper {
-    padding: 10px;
     background-color: white;
+    box-shadow: 0px 2px 2px black;
+    border-radius: 10px;
+    padding: 10px;
+
+    &:hover {
+        transition: 1s;
+        box-shadow: 0px 10px 10px black;
+    }
 
     ol {
         padding-left: 0px;
@@ -243,16 +272,15 @@ pre,
         border: 1px solid;
         padding: 20px;
         font-size: 20px;
+        border-radius: 10px;
     }
-
-
 }
 
 .post-edit-link {
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
-    border: 1px dashed;
+    margin: 5px 0px;
+    text-align: right;
+    width: 100%;
 }
 
 // MAIN SIDEBAR ///////////////////////////////////////////////////////////////////
@@ -576,6 +604,10 @@ pre,
         font-weight: bold;
         line-height: 0px;
         padding: 11px 3px;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     .boxclose:before {

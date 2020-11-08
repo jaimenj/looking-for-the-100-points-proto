@@ -38,12 +38,25 @@ and !is_front_page()) {
 
             <?php
             if (have_posts()) {
+                $there_is_previous = false;
                 while (have_posts()) {
                     the_post(); // Prepare data..
 
+                    if ($there_is_previous) {
+                        echo '<hr>';
+                    }
+
                     //echo get_post_type();
                     get_template_part('template-parts/content', get_post_type());
+
+                    $there_is_previous = true;
                 }
+
+                the_posts_pagination([
+                    'mid_size' => 2,
+                    'prev_text' => '« Anterior',
+                    'next_text' => 'Siguiente »',
+                ]);
             } else {
                 ?><p>Lo siento, no hay contenidos con ese criterio..</p><?php
             }

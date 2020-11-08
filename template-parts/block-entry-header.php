@@ -11,7 +11,7 @@
         ?>
         <div class="entry-categories">
             <div class="entry-categories-inner">
-                Categorías: <?php the_category('/'); ?>
+                Categorías: <?php the_category(' / '); ?>
             </div>
         </div>
         <?php
