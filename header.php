@@ -21,6 +21,28 @@
     }
     ?>
     <?php wp_head(); ?>
+    <?php //START GOOGLE ANALYTICS -->
+    if(!current_user_can('editor')
+    and !current_user_can('administrator')
+    and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])) { ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28718385-11"></script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-28718385-11', 'jnjsite.com', {
+        'storage': 'none',
+        'anonymizeIp': true,
+        'clientId': window.localStorage.getItem('googleAnalyticsClientId')
+        });
+        ga(function(tracker) {
+        window.localStorage.setItem('googleAnalyticsClientId', tracker.get('clientId'));
+        });
+        ga('send', 'pageview');
+        </script>
+    <?php } //<!-- END GOOGLE ANALYTICS ?>
 </head>
 <body <?php body_class('container-fluid'); ?>>
 

@@ -25,7 +25,7 @@ if ($next_post || $prev_post) {
                 } 
                 ?>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-md-6">
                 <?php
                 if ($next_post) {
                     ?>

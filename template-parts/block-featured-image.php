@@ -5,7 +5,7 @@ if (has_post_thumbnail() && !post_password_required()) {
     ?>
     <figure class="featured-image-figure">
         <img src="<?= get_the_post_thumbnail_url() ?>" 
-        class="img-fluid w-100"
+        class="img-fluid"
         alt="<?= the_title() ?>">
         <?php
         //the_post_thumbnail();

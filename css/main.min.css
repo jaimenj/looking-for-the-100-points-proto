@@ -18,9 +18,9 @@
 .icon-wordpress:before{content:"\eab4"}
 .icon-tux:before{content:"\eabd"}
 .icon-linkedin:before{content:"\eac9"}
-body{background-color:silver}
+body{background-color:#d0d0d0}
 .carousel-home{margin-top:-3rem;margin-left:-15px;margin-right:-15px;margin-bottom:3rem;box-shadow:0 1px 2px #000}
-.carousel-home img{cursor:pointer;height:500px;object-fit:cover}
+.carousel-home img{cursor:pointer;max-height:500px;object-fit:cover}
 .carousel-home .carousel-caption h5{font-size:50px;text-shadow:0 4px 5px #000;font-weight:700}
 .carousel-home a:hover{color:#fff;text-decoration:none}
 .carousel-control-next,.carousel-control-prev{opacity:1!important;transition:background-color 1s}
@@ -31,11 +31,19 @@ body{background-color:silver}
 .ads-wrapper-entry-posts-before{margin-bottom:3rem}
 .ads-wrapper-entry-posts-after{margin-top:3rem}
 .ads-wrapper>div{box-shadow:0 0 3px 2px #639}
+.wpcf7-form-control{padding:5px 10px;border-radius:10px}
+.wpcf7-form-control.wpcf7-submit{padding:20px}
+.wp-block-media-text{border:1px dashed #ccc;margin-bottom:20px}
+.post-inner{margin-bottom:20px}
 @media only screen and (max-width:990px) and (min-width:768px){
 .carousel-caption h5{font-size:40px!important}
 }
 @media only screen and (max-width:768px){
 .carousel-caption h5{font-size:30px!important}
+body{font-size:120%}
+}
+@media only screen and (max-width:480px){
+body{font-size:140%}
 }
 nav{margin-left:-15px;margin-right:-15px;box-shadow:0 1px 2px #000}
 .navbar{height:50px}
@@ -51,17 +59,23 @@ ul.dropdown-menu.show ul.dropdown-menu{left:50px;top:30px}
 @media only screen and (max-width:990px){
 .form-navbar-search{display:none}
 .navbar{padding-top:0;padding-bottom:0}
-#header-menu-id{z-index:2;background-color:#343a40;padding:0 20px 20px 20px;border-radius:0 0 20px 20px;box-shadow:0 3px 4px #000}
+#header-menu-id{z-index:20;background-color:#343a40;padding:0 20px 20px 20px;border-radius:0 0 20px 20px;box-shadow:0 3px 4px #000}
 }
 .wp-block-content,pre{background-color:#aaa!important;color:#000!important;padding:2.5em;word-wrap:normal;white-space:pre-wrap!important;color:#313131;font-family:monospace!important}
-.featured-image-figure{height:500px;position:relative;overflow:hidden;margin-top:-3rem;margin-bottom:3rem;margin-left:-15px;margin-right:-15px;box-shadow:0 1px 2px #000}
-.featured-image-figure img{position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}
+.featured-image-figure{max-height:500px;position:relative;overflow:hidden;margin-top:-3rem;margin-bottom:3rem;margin-left:-15px;margin-right:-15px;box-shadow:0 1px 2px #000}
+.featured-image-figure img{object-fit:cover;height:100%;width:100%}
 .entry-content h2{margin-top:20px;margin-bottom:20px}
 .entry-content img{max-width:100%;height:auto}
 .pagination-single{margin-top:3rem;margin-bottom:-3rem;padding:20px}
 .pagination-single a{font-size:20px}
 .pagination-single a .icon{font-size:30px;position:relative;top:6px}
 .pagination-single a:hover{text-decoration:none}
+@media only screen and (min-width:768px){
+.pagination-single .row :nth-child(2){text-align:right}
+}
+@media only screen and (max-width:768px){
+.pagination-single{text-align:center}
+}
 .pagination{padding:20px}
 .pagination .screen-reader-text{margin-bottom:0;margin-right:20px}
 .pagination .nav-links,.pagination h2{font-size:20px!important;line-height:initial}
@@ -126,7 +140,7 @@ ul.dropdown-menu.show ul.dropdown-menu{left:50px;top:30px}
 .sidebar-mailchimp a.boxclose:hover{text-decoration:none}
 .sidebar-mailchimp .boxclose:before{content:"×"}
 .sidebar-mailchimp .acceptance-label{margin-top:5px}
-.footer{color:silver}
+.footer{color:#d0d0d0}
 .footer a:hover{color:#fff}
 .footer-pre>div{padding:0}
 .footer-main{background-color:#3f4144}
@@ -135,7 +149,7 @@ ul.dropdown-menu.show ul.dropdown-menu{left:50px;top:30px}
 .footer-post{background-color:#343a40}
 .footer-post .sign{margin-top:20px;margin-bottom:20px}
 .footer-post .socials{text-align:right;margin:35px 20px}
-.footer-post .socials a{font-size:40px;color:silver;margin:10px}
+.footer-post .socials a{font-size:40px;color:#d0d0d0;margin:10px}
 .footer-post .socials a:hover{color:#fff;text-decoration:none}
 @media (max-width:768px){
 .sign,.socials{text-align:center!important}
