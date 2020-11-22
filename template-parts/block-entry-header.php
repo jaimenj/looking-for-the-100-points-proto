@@ -8,15 +8,13 @@
             the_title('<h2 class="entry-title heading-size-1"><a href="'.esc_url(get_permalink()).'">', '</a></h2>');
         }
 
-        if (is_single()) {
-            ?>
-            <div class="entry-categories">
-                <div class="entry-categories-inner">
-                    Categorías: <?php the_category(' / '); ?>
-                </div>
+        ?>
+        <div class="entry-extra-info">
+            <div class="entry-extra-info-inner">
+                <?php the_date('Y-m-d'); ?> - Categorías: <?php the_category(' / '); ?>
             </div>
-            <?php
-        }
+        </div>
+        <?php
 
         $intro_text_width = '';
         if (is_singular()) {
