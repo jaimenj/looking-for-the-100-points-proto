@@ -120,6 +120,15 @@
                 data-wpel-link="external">
                     <span class="icon-github"></span>
                 </a>
+                <a rel="noopener noreferrer nofollow external" 
+                class="social-icon" 
+                title="Stack Overflow" 
+                aria-label="Sígueme en Stack Overflow" 
+                href="https://stackoverflow.com/users/2511844/jaime-ni%c3%b1oles" 
+                target="_blank" 
+                data-wpel-link="external">
+                    <span class="icon-stackoverflow"></span>
+                </a>
                 <a rel="nofollow noopener noreferrer" 
                 class="social-icon" 
                 title="Suscríbete a mi feed RSS"
