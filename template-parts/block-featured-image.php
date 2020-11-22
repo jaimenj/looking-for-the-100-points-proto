@@ -3,10 +3,7 @@
 if (has_post_thumbnail() && !post_password_required()) {
     //var_dump(get_the_post_thumbnail());
     ?>
-    <figure class="featured-image-figure">
-        <img src="<?= get_the_post_thumbnail_url() ?>" 
-        class="img-fluid"
-        alt="<?= the_title() ?>">
+    <figure class="featured-image-figure" style="background-image: url(<?= get_the_post_thumbnail_url() ?>)">
         <?php
         //the_post_thumbnail();
         $caption = get_the_post_thumbnail_caption();

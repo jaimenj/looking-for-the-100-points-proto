@@ -50,7 +50,7 @@ and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
                 }
 
                 the_posts_pagination([
-                    'mid_size' => 2,
+                    'mid_size' => 5,
                     'prev_text' => '« Anterior',
                     'next_text' => 'Siguiente »',
                 ]);
