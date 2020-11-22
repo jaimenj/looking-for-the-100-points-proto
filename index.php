@@ -5,6 +5,29 @@ if (is_front_page()) {
     get_template_part('template-parts/home-carousel');
 }
 
+// Is category or tag page..
+if (is_category()) {
+    ?>
+    <div class="container-fluid category-description">
+        <h1 class="text-center"><?= single_cat_title(); ?></h1>
+        <?= category_description(); ?>
+    </div>
+    <?php
+} elseif (is_tag()) {
+    ?>
+    <div class="container-fluid tag-description">
+        <h1 class="text-center"><?= single_tag_title() ?></h1>
+        <?= tag_description(); ?>
+    </div>
+    <?php
+} elseif (is_home()) {
+    ?>
+    <div class="container-fluid is-home-blog">
+        <h1 class="text-center"><?= get_queried_object()->post_title ?></h1>
+    </div>
+    <?php
+}
+
 // Featured image..
 if (have_posts()
 and is_singular()
@@ -27,7 +50,7 @@ and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 ) { ?>
 	<div class="ads-wrapper ads-wrapper-entry-posts-before" id="21295-1" style="min-height: 100px; text-align: center;"><script src="//ads.themoneytizer.com/s/gen.js?type=1"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=1" ></script></div>
 <?php }
-//<-- END ADDS ?>
+//<-- END ADDS?>
 
 <div class="container">
     <div class="row row-container-posts">
