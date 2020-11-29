@@ -1,6 +1,19 @@
 <?php
 // Show slider..
-$recent_posts = wp_get_recent_posts();
+$recent_posts = wp_get_recent_posts([
+    'numberposts' => 10,
+    'offset' => 0,
+    'category' => 0,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'include' => '',
+    'exclude' => '',
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => ['post', 'page'],
+    'post_status' => 'publish', //'draft, publish, future, pending, private',
+    'suppress_filters' => true,
+]);
 //var_dump($recent_posts);
 ?>
 <div id="carouselHome" class="carousel carousel-home slide carousel-fade" data-ride="carousel">
@@ -10,10 +23,10 @@ $recent_posts = wp_get_recent_posts();
         $counter = 0;
         foreach ($recent_posts as $recent_post) {
             ?>
-            <li data-target="#carouselHome" data-slide-to="<?= $counter ?>"<?= $first ? ' class="active"' : ''; ?>></li>
+            <li data-target="#carouselHome" data-slide-to="<?= $counter; ?>"<?= $first ? ' class="active"' : ''; ?>></li>
             <?php
             $first = false;
-            $counter++;
+            ++$counter;
         }
         ?>
     </ol>
@@ -24,13 +37,13 @@ $recent_posts = wp_get_recent_posts();
             ?>
 
             <div 
-            class="carousel-item carousel-item-home<?= $first ? ' active' : '' ?>" 
-            data-url="<?= home_url($recent_post['post_name']).'/' ?>">
-                <img src="<?= get_the_post_thumbnail_url($recent_post['ID']) ?>" 
+            class="carousel-item carousel-item-home<?= $first ? ' active' : ''; ?>" 
+            data-url="<?= home_url($recent_post['post_name']).'/'; ?>">
+                <img src="<?= get_the_post_thumbnail_url($recent_post['ID']); ?>" 
                 class="d-block w-100"
-                alt="<?= $recent_post['post_title'] ?>">
+                alt="<?= $recent_post['post_title']; ?>">
                 <div class="carousel-caption">
-                    <h5><a href="<?= home_url($recent_post['post_name']).'/' ?>"><?= $recent_post['post_title'] ?></a></h5>
+                    <h5><a href="<?= home_url($recent_post['post_name']).'/'; ?>"><?= $recent_post['post_title']; ?></a></h5>
                 </div>
             </div>
 
