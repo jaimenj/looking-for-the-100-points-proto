@@ -8,13 +8,15 @@
             the_title('<h2 class="entry-title heading-size-1"><a href="'.esc_url(get_permalink()).'">', '</a></h2>');
         }
 
-        ?>
-        <div class="entry-extra-info">
-            <div class="entry-extra-info-inner">
-                <?php the_date('Y-m-d'); ?> - Categorías: <?php the_category(' / '); ?>
+        if ('post' == get_post_type()) {
+            ?>
+            <div class="entry-extra-info mb-2">
+                <div class="entry-extra-info-inner">
+                    <?php the_date('Y-m-d'); ?> - Categorías: <?php the_category(' / '); ?>
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
+        }
 
         $intro_text_width = '';
         if (is_singular()) {
