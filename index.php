@@ -9,15 +9,19 @@ if (is_front_page()) {
 if (is_category()) {
     ?>
     <div class="container-fluid category-description">
-        <h1 class="text-center"><?= single_cat_title(); ?></h1>
-        <?= category_description(); ?>
+        <div class="container">
+            <h1 class="text-center"><?= single_cat_title(); ?></h1>
+            <?= category_description(); ?>
+        </div>
     </div>
     <?php
 } elseif (is_tag()) {
     ?>
     <div class="container-fluid tag-description">
-        <h1 class="text-center"><?= single_tag_title() ?></h1>
-        <?= tag_description(); ?>
+        <div class="container">
+            <h1 class="text-center"><?= single_tag_title() ?></h1>
+            <?= tag_description(); ?>
+        </div>
     </div>
     <?php
 } elseif (is_home()) {
