@@ -12,7 +12,9 @@
             ?>
             <div class="entry-extra-info mb-2">
                 <div class="entry-extra-info-inner">
-                    <?php the_date('Y-m-d'); ?> - Categorías: <?php the_category(' / '); ?>
+                    <?php 
+                    echo substr(get_post()->post_date, 0, 10);
+                    ?> - Categorías: <?php the_category(' / '); ?>
                 </div>
             </div>
             <?php
