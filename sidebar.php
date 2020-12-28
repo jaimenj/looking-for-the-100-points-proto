@@ -140,8 +140,6 @@ and strpos($_SERVER['REQUEST_URI'], 'miscellanous-scripts-for-wordpress') === fa
 and !preg_match('/127.0.0.1/', $_SERVER['REMOTE_ADDR'])
 ) { ?>
 	<div class="ads-wrapper" id="21295-2"><script src="//ads.themoneytizer.com/s/gen.js?type=2"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=21295&formatId=2" ></script></div>
-
-    <p class="mt-5 text-center"><a href="https://es.themoneytizer.com/&sponsor=379b1428b8220fdd142b104dbd8ab109#inscription" target="_blank"><img src="/wp-content/uploads/logomoneytizer.png" alt="Logo The Moneytizer" class="img-fluid w-75"><br>..enlace patrocinador.<br></a></p>
 <?php } 
 //<-- END ADDS ?>
 
