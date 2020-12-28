@@ -44,7 +44,7 @@ class Lft100p
             'header-text' => ['JnjSite.com', 'Entre bastidores de un apasionado de la informática'],
         ]);
         add_theme_support('post-thumbnails');
-        add_theme_support('post-formats');
+        add_theme_support('post-formats', []);
         add_theme_support('post-html5');
         add_theme_support('responsive-embeds');
         add_theme_support('wp-block-styles');
