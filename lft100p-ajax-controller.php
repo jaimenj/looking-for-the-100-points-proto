@@ -17,13 +17,27 @@ class Lft100pAjaxController
 
     private function __construct()
     {
-        add_action('testing', [$this, 'testing']);
-        add_action('no_priv_testing', [$this, 'testing']);
+        add_action('wp_ajax_testing', [$this, 'testing']);
+        add_action('wp_ajax_no_priv_testing', [$this, 'testing']);
+
+        add_action('wp_ajax_testing_json', [$this, 'testing_json']);
+        add_action('wp_ajax_no_priv_testing_json', [$this, 'testing_json']);
     }
 
     public function testing()
     {
         get_template_part('template-parts/testing');
+        wp_die();
+    }
+
+    public function testing_json()
+    {
+        header('Content-type: application/json');
+        echo json_encode([
+            'error' => false,
+            'message' => 'Ok',
+            'data' => [],
+        ]);
         wp_die();
     }
 }

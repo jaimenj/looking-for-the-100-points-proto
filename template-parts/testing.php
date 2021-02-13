@@ -2,5 +2,5 @@
 
 defined('ABSPATH') or die();
 
-echo ABSPATH;
 ?>
+<p>This is a test..</p>
