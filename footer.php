@@ -1,4 +1,8 @@
+<?php
 
+defined('ABSPATH') or die();
+
+?>
     <div class="row footer footer-pre mt-5">
         <div class="col-xl-2 col-lg-4 col-6">
             <a href="/diseno-programacion-gestion-proyectos-web/">

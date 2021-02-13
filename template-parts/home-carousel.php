@@ -1,4 +1,7 @@
 <?php
+
+defined('ABSPATH') or die();
+
 // Show slider..
 $recent_posts = wp_get_recent_posts([
     'numberposts' => 10,

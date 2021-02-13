@@ -1,4 +1,8 @@
-<header class="entry-header">
+<?php
+
+defined('ABSPATH') or die();
+
+?><header class="entry-header">
     <div class="entry-header-inner section-inner medium">
         <?php
 

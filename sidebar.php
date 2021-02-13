@@ -1,3 +1,8 @@
+<?php
+
+defined('ABSPATH') or die();
+
+?>
 <div class="sidebar-main-container sidebar">
 
     <?php dynamic_sidebar('sidebar-main'); ?>

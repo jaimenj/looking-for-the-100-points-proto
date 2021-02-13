@@ -6,7 +6,7 @@ class Lft100p
 {
     private static $instance;
 
-    public static function instance()
+    public static function get_instance()
     {
         if (!isset(self::$instance)) {
             self::$instance = new self();
@@ -103,4 +103,4 @@ class Lft100p
 }
 
 // Do all once..
-Lft100p::instance();
+Lft100p::get_instance();

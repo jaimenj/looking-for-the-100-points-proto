@@ -1,4 +1,7 @@
 <?php
+
+defined('ABSPATH') or die();
+
 $next_post = get_next_post();
 $prev_post = get_previous_post();
 

@@ -1,4 +1,8 @@
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<?php
+
+defined('ABSPATH') or die();
+
+?><article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <?php
     if (!is_front_page()) {
         get_template_part('template-parts/block-entry-header');

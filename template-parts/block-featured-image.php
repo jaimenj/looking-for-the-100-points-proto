@@ -1,5 +1,7 @@
 <?php
 
+defined('ABSPATH') or die();
+
 if (has_post_thumbnail() && !post_password_required()) {
     //var_dump(get_the_post_thumbnail());
     ?>

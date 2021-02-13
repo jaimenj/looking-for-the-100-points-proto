@@ -1,4 +1,7 @@
 <?php
+
+defined('ABSPATH') or die();
+
 get_header();
 
 if (is_front_page()) {
