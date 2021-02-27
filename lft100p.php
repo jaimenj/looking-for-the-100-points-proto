@@ -27,9 +27,9 @@ class Lft100p
         if (!is_admin()) {
             wp_enqueue_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', [], null);
             wp_enqueue_style('main', get_template_directory_uri().'/css/main.min.css', ['bootstrap'], null);
-            wp_enqueue_script('popper', get_template_directory_uri().'/js/popper.min.js', [], '', true);
-            wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', [], '', true);
-            wp_enqueue_script('main', get_template_directory_uri().'/js/main.min.js', [], '', true);
+            wp_enqueue_script('popper', get_template_directory_uri().'/js/popper.min.js', ['jquery'], '', true);
+            wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js', ['jquery'], '', true);
+            wp_enqueue_script('main', get_template_directory_uri().'/js/main.min.js', ['jquery'], '', true);
         }
     }
 
